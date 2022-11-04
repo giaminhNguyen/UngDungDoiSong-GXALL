@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/advent_pro_light</item>
+        <item>@font/archivo_black</item>
+        <item>@font/basic</item>
+        <item>@font/chonburi</item>
+        <item>@font/comfortaa</item>
+        <item>@font/montserrat_alternates</item>
+        <item>@font/quicksand</item>
+    </array>
+</resources>

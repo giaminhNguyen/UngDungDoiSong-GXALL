@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DangNhapActi">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/dangNhapActi_gif_study"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/study"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
+        app:layout_constraintWidth_percent="0.4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:id="@+id/dangNhapActi_layout_constrain"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintWidth_percent="0.35"
+            android:layout_marginEnd="-90dp"
+            android:layout_marginBottom="-90dp"
+            app:layout_constraintBottom_toTopOf="@id/dangNhapActi_layout_linear1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/circle_bluegreen"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3"
+            android:id="@+id/dangNhapActi_gui_h1"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25"
+            android:id="@+id/dangNhapActi_gui_h2"
+            />
+
+        <LinearLayout
+            android:id="@+id/dangNhapActi_layout_linear1"
+            android:layout_centerInParent="true"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/strokeblack_corner20"
+            app:layout_constraintTop_toBottomOf="@id/dangNhapActi_gui_h1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/basic"
+                    android:text="Tài khoản"
+                    android:textColor="#333232"
+                    android:textSize="17sp" />
+                <EditText
+                    android:id="@+id/dangNhapActi_et_taiKhoan"
+                    android:fontFamily="@font/basic"
+                    android:background="@drawable/white_strokeblack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/basic"
+                    android:text="Mật khẩu"
+                    android:textColor="#333232"
+                    android:textSize="17sp" />
+                <EditText
+                    android:fontFamily="@font/basic"
+                    android:id="@+id/dangNhapActi_et_matKhau"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:background="@drawable/white_strokeblack"
+                    android:padding="10dp"
+                    android:inputType="textPassword"
+                    android:textSize="20sp"
+                    />
+                <CheckBox
+                    android:fontFamily="@font/basic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nhớ mật khẩu"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/dangNhapActi_chk_nhoMatKhau"
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </LinearLayout>
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@id/dangNhapActi_layout_linear1"
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="-18dp"
+            android:weightSum="10"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dangNhapActi_btn_dangNhap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="3.6"
+                android:onClick="actionDangNhap"
+                android:background="@drawable/actionpress_orrangeblack_corner8"
+                android:fontFamily="sans-serif-black"
+                android:text="Đăng Nhập"
+                android:textColor="@color/white" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="0dp"
+                android:onClick="actionDangKy"
+                android:layout_weight="3.6"
+                android:layout_height="wrap_content"
+                android:text="Đăng Ký"
+                android:layout_marginStart="15dp"
+                android:id="@+id/dangNhapActi_btn_dangKy"
+                android:textColor="@color/white"
+                android:background="@drawable/actionpress_orrangeblack_corner8"
+                android:fontFamily="sans-serif-black"
+                />
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintWidth_percent="0.35"
+            android:layout_marginStart="-70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/circle_whiteorrage"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="-130dp"
+            android:background="@drawable/circle_whiteorrage"
+            app:layout_constraintBottom_toTopOf="@+id/dangNhapActi_gui_h2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:gravity="center"
+            android:text="Đăng Nhập"
+            android:textColor="@color/black"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/dangNhapActi_gui_h2"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            app:layout_constraintHeight_percent="0.08"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/logo_fpoly"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
